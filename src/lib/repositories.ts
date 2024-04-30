@@ -128,6 +128,10 @@ function extractRepositories(markdownText: string): ProjectsAndCategories {
 	return { projects, categories: allCategories };
 }
 
+const urls = [
+	'https://github.com/aljazceru/awesome-nostr/blob/main/README.md'
+];
+
 async function combineSources(urls: string[]): Promise<string> {
 	let combinedMarkdown = '';
 	for (const item of urls) {
